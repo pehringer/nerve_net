@@ -108,9 +108,9 @@ def set_learning_type(network: dict, learning_name: str) -> None:
 	'''
 	match learning_name:
 		case "online":
-			network["learning_function"] = _learn_online
+			network["learning_type"] = _learn_online
 		case "batch":
-			network["learning_function"] = _learn_batch
+			network["learning_type"] = _learn_batch
 
 ###############################
 # Network Forward Propagation #
@@ -477,7 +477,7 @@ output_neurons = 18
 network = create_network(input_neurons, hidden_neurons, hidden_layers, output_neurons)
 #Changed all configurable settings for this exmaple.
 set_activation_function(network, "tanh")
-set_learning_type(network, "batch")
+set_learning_type(network, "online")
 set_learning_rate(network, 0.18)
 set_epochs(network, 4096)
 #Train network.
