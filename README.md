@@ -1,4 +1,4 @@
-# Nerve_Net
+# nerve_net
 Like its biological namesake this is a implementation of the simplest type of neural network, that being a feedforward network using backpropagation for learning.  This implementation uses only base python 3.10, no additional libraries required.
 
 ## Network Initialization
