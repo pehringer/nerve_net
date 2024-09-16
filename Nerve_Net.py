@@ -379,7 +379,7 @@ def train_network(network: dict, example_inputs: list[list[float]], expected_out
 		for i in range(20):
 			bar += "=" if i*5 <= percent else " "
 		bar += "]"
-		print("\033[1ATraining", bar, percent, "\033[38;5;198m%\033[0;30m")
+		print("\033[1ATraining", bar, percent, "%")
 		#Have network learn for this epoch.
 		network["learning_type"](network, example_inputs, expected_outputs)
 	print("\033[1A\033[2KTraining Complete")
